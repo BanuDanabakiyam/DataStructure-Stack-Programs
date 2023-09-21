@@ -3,7 +3,7 @@ import java.util.Vector;
 
 public class MiddleElement {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         Stack <Character> st = new Stack<Character>();
         st.push('1');
         st.push('2');
@@ -21,9 +21,16 @@ public class MiddleElement {
         int n = vector.size();
         if( n % 2 == 0) {
             int target = (n / 2);
+            System.out.println("target value:" + target);
             for (int i = 0; i < n; i++) {
+
                 if (i == target)
-                    continue;
+
+                continue;
+                System.out.println("i value" + i);
+                System.out.println("target" + vector.get(i));
+
+
                 st.push(vector.get(i));
 
             }
@@ -31,6 +38,8 @@ public class MiddleElement {
 
         else {
             int target = (int) Math.ceil(n / 2);
+            System.out.println("target value:" + target);
+
             for (int i = 0; i < n; i++) {
                 if (i == target)
                     continue;
