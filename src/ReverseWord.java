@@ -3,6 +3,8 @@ import java.util.Stack;
 public class ReverseWord {
     public static void reverse(String str){
         Stack <Character> stack = new Stack<Character>();
+        StringBuffer sb = new StringBuffer();
+
         for (int i = 0; i < str.length(); i++) {
 
             if (str.charAt(i) != ' ') {
@@ -16,10 +18,13 @@ public class ReverseWord {
             }
         }
             while (stack.empty() == false){
-                System.out.println(stack.pop());
-            }
+                sb.append(stack.pop());
 
-        }
+            }
+        System.out.println(sb.toString());
+
+
+    }
 
     public static void main(String []args) {
         String str = "Hello Welcome";
